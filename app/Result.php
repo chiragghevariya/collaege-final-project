@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Auth;
 
 class Result extends Model
 {
+    protected $fillable =['file'];
+
     //
     public static function scopeauth($query)
     {

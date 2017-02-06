@@ -19,6 +19,7 @@ class CreateResultsTable extends Migration
             $table->string('title');
             $table->string('semester');
             $table->float('spi');
+            $table->string('photo');
             $table->timestamps();
         });
     }

@@ -6,7 +6,7 @@
 
     <div style="width: 90%;margin: auto;margin-top: 5em">
 
-        <form method="post" action="{{Route('result.store')}}">
+        <form method="post" action="{{Route('result.store')}}" enctype="multipart/form-data">
 
             {{csrf_field()}}
 
@@ -57,6 +57,20 @@
             </div>
 
 
+            <div class="row">
+
+                <div class="col-md-8">
+
+                    <div class="form-group">
+
+                        <label for="semester">Select Result Image"</label>
+                        <input type="file" name="photo" class="form-control" >
+
+                    </div>
+
+                </div>
+
+            </div>
 
             <div class="row">
 

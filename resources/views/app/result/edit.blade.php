@@ -6,7 +6,7 @@
 
     <div style="width: 90%;margin: auto;margin-top: 5em">
 
-        <form method="post" action="{{Route('result.update',['id'=>$result->id])}}">
+        <form method="post" action="{{Route('result.update',['id'=>$result->id])}}" enctype="multipart/form-data">
 
             {{csrf_field()}}
             <input type="hidden" value="put" name="_method">
@@ -58,6 +58,21 @@
 
             </div>
 
+            <div class="row">
+
+                <div class="col-md-8">
+
+                    <div class="form-group">
+
+                        <label for="semester">Select Result Image"</label>
+                        <input type="file" name="photo" value="{{$result->photo}}">
+                    </div>
+
+                </div>
+
+            </div>
+
+
 
 
             <div class="row">
@@ -66,7 +81,7 @@
 
                     <div class="form-group">
 
-                        <input type="submit" class="btn light-blue darken-4" value="create">
+                        <input type="submit" class="btn light-blue darken-4" value="Update">
                         <a class="btn red lighten-1" href="{{Route('result.index')}}">Cancle</a>
 
                     </div>

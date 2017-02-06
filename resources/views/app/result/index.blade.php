@@ -22,10 +22,12 @@
                 <th>Title</th>
                 <th>Semester</th>
                 <th>Spi</th>
+                <th>Photo</th>
                 <th>Edit</th>
                 <th>Delete</th>
 
             </tr>
+
 
             @foreach($result as $result)
 
@@ -34,6 +36,8 @@
                     <td>{{$result->title}}</td>
                     <td>{{$result->semester}}</td>
                     <td>{{$result->spi}}</td>
+                    {{--<td>{{$result->photo}}</td>--}}
+                    <td><img width="50" src="{{url('Result/'.\Auth::user()->id.'/images/'.$result->photo)}}"></td>
                     <td><a class="btn light-blue darken-4" href="{{route('result.edit',['id'=>$result->id])}}">Edit</a></td>
                     <td>
                         <form method="post" action="{{Route('result.destroy',['id'=>$result->id])}}">

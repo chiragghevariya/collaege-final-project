@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Result;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Input;
 
 class ResultController extends Controller
 {
@@ -42,6 +44,17 @@ class ResultController extends Controller
         $result->title =$request->title;
         $result->semester =$request->semester;
         $result->spi =$request->spi;
+
+        if($file = $request->file('photo')) {
+
+            $name = time() . $file->getClientOriginalName();
+
+            $file->move('Result/'.\Auth::user()->id.'/images', $name);
+
+            $result->photo =$name;
+
+        }
+
         $result->save();
         return redirect()->route('result.index');
 
@@ -79,12 +92,24 @@ class ResultController extends Controller
      */
     public function update(Request $request, $id)
     {
-       $result = Result::find($id);
+        $result = Result::find($id);
         $result->user_id =\Auth::user()->id;
         $result->title =$request->title;
         $result->semester =$request->semester;
         $result->spi =$request->spi;
+
+        if($file = $request->file('photo')) {
+
+            $name = time() . $file->getClientOriginalName();
+
+            $file->move('Result/'.\Auth::user()->id.'/images', $name);
+
+            $result->photo =$name;
+
+        }
         $result->save();
+
+
         return redirect()->route('result.index');
 
     }
