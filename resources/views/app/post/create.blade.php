@@ -66,7 +66,7 @@
                     <div class="form-group">
 
                         <label for="semester">Select Result Image"</label>
-                        <input type="file" name="photo" class="form-control" required>
+                        <input type="file" name="photo" class="form-control" multiple required>
 
                     </div>
 

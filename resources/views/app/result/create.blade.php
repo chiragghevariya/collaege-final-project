@@ -66,11 +66,9 @@
                         {{--<label for="semester">Select Result Image"</label>--}}
                         {{--<input type="file" name="photo" class="form-control" >--}}
 
-
                         <label class="btn btn-default btn-file">
                             Browse <input type="file" style="display: none;" name="photo" required>
                         </label>
-
 
                     </div>
 
