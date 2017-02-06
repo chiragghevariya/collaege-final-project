@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -37,12 +38,28 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+
+//        $file->move('Result/'.\Auth::user()->id.'/images', $name);
+//
+//        $result->photo =$name;
+
 //            dd($request->all());
           $post = new Post();
           $post->user_id =  \Auth::user()->id;
           $post->title =$request->title;
           $post->date =$request->date;
           $post->description =$request->description;
+
+          if($file =$request->file('photo')){
+
+              $name =time() .$file->getClientOriginalName();
+
+              $file->move('Post/'.\Auth::user()->id.'/images',$name);
+
+              $post->photo =$name;
+
+          }
+
           $post->save();
           return redirect()->route('post.index');
     }
@@ -84,6 +101,17 @@ class PostController extends Controller
         $post->title =$request->title;
         $post->date =$request->date;
         $post->description =$request->description;
+
+        if($file =$request->file('photo')){
+
+            $name =time() .$file->getClientOriginalName();
+
+            $file->move('Post/'.\Auth::user()->id.'/images',$name);
+
+            $post->photo =$name;
+
+        }
+
         $post->save();
         return redirect()->route('post.index');
     }

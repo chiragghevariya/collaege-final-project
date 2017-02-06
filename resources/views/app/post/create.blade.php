@@ -10,9 +10,9 @@
 
 
 
-    <div class="post-form">
+    <div style="margin-top: 5em">
 
-        <form method="post" action="{{route('post.store')}}">
+        <form method="post" action="{{route('post.store')}}" enctype="multipart/form-data">
 
             {{csrf_field()}}
 
@@ -50,7 +50,7 @@
                     <div class="form-group">
 
                         <label for="Title">Description</label>
-                        <textarea class="form-control" rows="10" cols="10" name="description" required></textarea>
+                        <textarea class="form-control" rows="8" cols="10" name="description" required></textarea>
 
                     </div>
 
@@ -59,8 +59,36 @@
             </div>
 
 
-            <input type="submit" value="Create post" class="btn btn-primary">
-            <a class="btn btn-danger" style=" margin-left: 1em" href="{{Route('post.index')}}">Cancle</a>
+            <div class="row">
+
+                <div class="col-md-10">
+
+                    <div class="form-group">
+
+                        <label for="semester">Select Result Image"</label>
+                        <input type="file" name="photo" class="form-control" required>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-10">
+
+                    <div class="form-group">
+
+                        <input type="submit" value="Create post" class="btn light-blue darken-4">
+                        <a class="btn red lighten-1" style=" margin-left: 1em" href="{{Route('post.index')}}">Cancle</a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
 
         </form>
 

@@ -28,7 +28,7 @@
                     <a class="dropdown-button" href="#!" data-activates="dropdown1">Hi, There</a>
                     <ul id="dropdown1" class="dropdown-content active" style="position: absolute; bottom:0;">
                         <li><a href="#">Settigns</a></li>
-                        <li><a href="#">Logout</a></li>
+                        <li><a href="{{url('logout')}}">Logout</a></li>
                     </ul>
                 </li>
             </ul>
