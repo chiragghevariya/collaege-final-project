@@ -7,14 +7,18 @@
 
             <ul class="right hide-on-med-and-down">
 
-                <li><a href="{{route('dashboard.index')}}"> My dashboard </a> </li>
+
                 {{-- UserRole Based Menu --}}
                 @if(\Auth::user()->role == 1)
                 <li><a href="{{route('courses.enrolled')}}"> My Courses</a></li>
+                    <li><a href="">Result Analysis</a></li>
+
                 @endif
 
                 @if(\Auth::user()->role == 2)
-                <li><a href="{{route('courses.index')}}"> My Courses</a></li>
+                    <li><a href="{{route('dashboard.index')}}"> My dashboard </a> </li>
+                    <li><a href="{{route('courses.index')}}"> My Courses</a></li>
+                    <li><a href="{{route('post.index')}}">Post</a></li>
                 @endif
                 {{--/ UserRole Based Menu --}}
 

@@ -20,5 +20,14 @@ class UsersTableSeeder extends Seeder
             'role' => '2',
             'department_id' => 1
             ]);
+
+
+        User::create([
+            'email'=>'student@aston.com',
+            'name'=>'student',
+            'password'=>\Hash::make('student@1234'),
+            'role' => '1',
+            'department_id' => 1
+        ]);
     }
 }

@@ -5,6 +5,14 @@
        @yield('title')
     </title>
     <!-- Fixed -->
+
+    <link type="text/css" rel="stylesheet" href="{{asset('projectstylefile/css/bootstrap.min.css')}}">
+
+    <script type="text/javascript" src="{{asset('projectstylefile/js/bootstrap.min.js')}}"></script>
+
+    <link type="text/css" rel="stylesheet" href="{{asset('projectstylefile/css/font-awesome.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{asset('projectstylefile/post.css')}}">
+
     <link rel="stylesheet" type="text/css" href="{{asset('css/materialize.css')}}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
