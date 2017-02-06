@@ -11,7 +11,7 @@
                 {{-- UserRole Based Menu --}}
                 @if(\Auth::user()->role == 1)
                 <li><a href="{{route('courses.enrolled')}}"> My Courses</a></li>
-                    <li><a href="">Result Analysis</a></li>
+                    <li><a href="{{route('result.index')}}">Result Analysis</a></li>
 
                 @endif
 

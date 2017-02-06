@@ -31,8 +31,7 @@ Route::group(['middleware' => 'guest'], function() {
     
 });
 
-Route::resource('courses.assignments.submissions','SubmissionsController');
-Route::resource('courses.assignments.submissions.questions.answers','AnswersController');
+
 
 /* ******************************** Course Routes ****************** */
 Route::group(['prefix'=>'panel','middleware'=>'auth'],function() {
@@ -43,6 +42,8 @@ Route::group(['prefix'=>'panel','middleware'=>'auth'],function() {
     Route::resource('courses.assignments','AssignmentsController');
 
     Route::resource('courses.assignments.questions','QuestionsController');
+    Route::resource('courses.assignments.submissions','SubmissionsController');
+    Route::resource('courses.assignments.submissions.questions.answers','AnswersController');
 
 
     Route::get('/course/enrolled',['as'=>'courses.enrolled','uses'=>'EnrollmentController@enrolled']);
@@ -51,5 +52,6 @@ Route::group(['prefix'=>'panel','middleware'=>'auth'],function() {
 
 
     Route::resource('post','PostController');
+    Route::resource('result','ResultController');
 });
 /* ******************************************************************** */
