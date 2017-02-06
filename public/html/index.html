@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		AstonPro <!-- Variable -->
+	</title>
+	<!-- Fixed -->
+	<link rel="stylesheet" type="text/css" href="../css/materialize.css">
+	 <!--   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">	  -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <!-- Fixed-->
+</head>
+<body>
+<!-- Fixed -->
+  <nav class="nav">
+    <div class="nav-wrapper">
+    <div class="container">
+      <a href="#" class="brand-logo">AstonPro</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <!-- Gloabal Menu -->
+      <ul  class="right hide-on-med-and-down">
+             <li> <a href="#">        My Courses</a>
+     	</li>
+        <li><a href="badges.html">Messages</a></li>
+        <li>
+     	<a class="dropdown-button" href="#!" data-activates="dropdown1">Hi, There</a>
+     		<ul id="dropdown1" class="dropdown-content active" style="position: absolute; bottom:0;">
+     			<li><a href="#">Settigns</a></li>
+     			<li><a href="#">Logout</a></li>
+     		</ul>
+     	</li>      
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+            <li>
+     	<a class="dropdown-button" href="#!" data-activates="dropdown3">My Coureses</a>
+     		<ul id="dropdown3" class="dropdown-content " >     			
+     			<li><a href="#">Computer Graphics</a></li>
+     			<li><a href="#">Add Course</a></li>
+     		</ul>
+     	</li>
+        <li><a href="badges.html">Messages</a></li>
+     	 <li><a href="collapsible.html">Settings</a></li>
+        <li><a href="collapsible.html">Logout</a></li>
+      </ul>
+      <!-- variable -->
+      <!-- Page Spacific Tabes -->
+
+    </div>
+    </div>
+  </nav>
+<div class="container">
+<div class="row">
+   <div class="col s6 m4 card">
+    <div class="card-content">
+    <div class="card-title">
+      Course Name
+    </div>
+    </div>
+    <div class="card-action">
+      <button class="btn">Update</button>
+      <button class="btn red "> Delete</button>
+    </div>
+  </div>
+
+   <div class="col s6 m4 card">
+    <div class="card-content">
+    <div class="card-title">
+      Course Name
+    </div>
+    </div>
+    <div class="card-action">
+      <button class="btn">Update</button>
+      <button class="btn red "> Delete</button>
+    </div>
+  </div>
+
+   <div class="col s6 m4 card">
+    <div class="card-content">
+    <div class="card-title">
+      Course Name
+    </div>
+    </div>
+    <div class="card-action">
+      <button class="btn">Update</button>
+      <button class="btn red "> Delete</button>
+    </div>
+  </div>
+
+   <div class="col s6 m4 card  cyan">
+    <div class="card-content">
+    <div class="card-title">
+      New Course
+    </div>
+    </div>
+    <div class="card-action">
+      <button class="btn"> Create</button>    
+    </div>
+  </div>
+    
+
+</div>
+ 
+    
+
+</div>
+
+  <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="../js/jquery.min.js"></script>
+      <script type="text/javascript" src="../js/materialize.min.js"></script>
+      <script type="text/javascript">
+      	$(document).ready(function() {
+      		$(".dropdown-button").dropdown();
+      		$(".button-collapse").sideNav();
+      	})
+      </script>
+</body>
+</html>
