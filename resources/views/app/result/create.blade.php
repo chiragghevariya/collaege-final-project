@@ -17,7 +17,7 @@
                     <div class="form-group">
 
                         <label for="Title">Title:</label>
-                        <input type="text" class="form-control" name="title" placeholder="Add title">
+                        <input type="text" class="form-control" name="title" placeholder="Add title" required>
 
                     </div>
 
@@ -28,7 +28,7 @@
                     <div class="form-group">
 
                         <label for="spi">SPI:</label>
-                        <input type="text" class="form-control" name="spi" placeholder="SPI">
+                        <input type="text" class="form-control" name="spi" placeholder="SPI" required>
 
                     </div>
 
@@ -63,8 +63,14 @@
 
                     <div class="form-group">
 
-                        <label for="semester">Select Result Image"</label>
-                        <input type="file" name="photo" class="form-control" >
+                        {{--<label for="semester">Select Result Image"</label>--}}
+                        {{--<input type="file" name="photo" class="form-control" >--}}
+
+
+                        <label class="btn btn-default btn-file">
+                            Browse <input type="file" style="display: none;" name="photo" required>
+                        </label>
+
 
                     </div>
 
@@ -91,7 +97,6 @@
 
 
     </div>
-
 
 
 
