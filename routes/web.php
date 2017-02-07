@@ -15,6 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home',function (){
+
+    return view('home');
+
+});
+
 Route::get('/logout','AuthController@logout');
 
 Route::group(['middleware' => 'guest'], function() {
@@ -25,7 +31,8 @@ Route::group(['middleware' => 'guest'], function() {
     Route::post('/login','AuthController@attempt');
 
     Route::get('/register',function() {
-        return "Under Consttuction";
+
+        return view('site.auth.register');
     }); 
 
     
